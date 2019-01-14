@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_shop_of_mall_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="2019，北京你好"
+        android:textColor="#FF153471"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_coupon_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_shop_of_mall_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:textColor="#FF999999"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/layout_payment_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_coupon_date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:id="@+id/text_payment_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="相信的力量"
+            android:textColor="#FF333333"
+            android:textSize="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="go"
+            android:textColor="#FF333333"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_deal_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_payment_amount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="I am head"
+        android:textColor="@color/colorRed"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/divider_deal_result"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/text_deal_result"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="33dp"
+        android:background="#FFEEEEEE" />
+
+</RelativeLayout>
