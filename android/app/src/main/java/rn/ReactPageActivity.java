@@ -9,7 +9,7 @@ public class ReactPageActivity extends ReactActivity{
      */
     @Override
     protected String getMainComponentName() {
-        return "RNHybrid";
+        return "test";
     }
 }
 
