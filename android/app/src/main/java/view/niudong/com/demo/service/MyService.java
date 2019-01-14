@@ -10,7 +10,7 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 
 import utils.ToastUtils;
-import view.niudong.com.demo.MainActivity;
+import view.niudong.com.demo.MainTestActivity;
 import view.niudong.com.demo.R;
 
 
@@ -49,7 +49,7 @@ public class MyService extends Service {
         Log.d(TAG, "onCreate: ");
 
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MainTestActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
         Notification notification = new Notification.Builder(this)
                 .setContentText("My is title")

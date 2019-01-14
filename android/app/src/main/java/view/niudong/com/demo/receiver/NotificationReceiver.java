@@ -4,14 +4,12 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Process;
 import android.text.TextUtils;
 import android.widget.Toast;
 
 
 import utils.AppInfoUtils;
 import utils.Bus;
-import view.niudong.com.demo.MainActivity;
 import view.niudong.com.demo.MainTabActivity;
 import view.niudong.com.demo.MyApplication;
 
@@ -82,15 +80,15 @@ public class NotificationReceiver extends BroadcastReceiver {
 //        if (!TextUtils.isEmpty(UserDataSource.getInstance().getUid())) {
 //
 //            if (AppInfoUtils.isApplicationBroughtToBackground(mContext)) {//后台
-//                Intent resultIntent = new Intent(mContext, MainActivity.class);
+//                Intent resultIntent = new Intent(mContext, MainTestActivity.class);
 //                mContext.startActivity(resultIntent);
 //                processJumpPage(Integer.parseInt(goto_type));
 //            } else {//前台
-//                if (AppInfoUtils.isActivityTop(MainActivity.class, mContext)) {
+//                if (AppInfoUtils.isActivityTop(MainTestActivity.class, mContext)) {
 //                    processJumpPage(Integer.parseInt(goto_type));
 //                    //栈顶 刷新主页面
 //                } else {
-//                    Intent resultIntent = new Intent(mContext, MainActivity.class);
+//                    Intent resultIntent = new Intent(mContext, MainTestActivity.class);
 //                    mContext.startActivity(resultIntent);
 //                    processJumpPage(Integer.parseInt(goto_type));
 //                }

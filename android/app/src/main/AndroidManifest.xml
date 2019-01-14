@@ -22,11 +22,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                </intent-filter>
         </activity>
         <activity android:name=".MainTabActivity"
 
@@ -89,7 +89,8 @@
         <activity android:name=".ScrollDetailActivity" />
         <activity android:name=".CoolTranslucentActivity" />
         <activity android:name=".SlideScrollActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainTestActivity" >
+        </activity>
         <activity android:name=".StickViewPagerActivity" />
         <activity android:name=".HandlerActivity" />
         <activity android:name=".ServiceActivity" />

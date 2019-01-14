@@ -1,13 +1,9 @@
 package tabfragment;
 
-import android.content.Intent;
 import android.view.View;
-import android.widget.Button;
 
 import base.TestBaseFragment;
 import utils.ToastUtils;
-import view.niudong.com.demo.FragmentStackActivity;
-import view.niudong.com.demo.MainActivity;
 import view.niudong.com.demo.R;
 
 /**

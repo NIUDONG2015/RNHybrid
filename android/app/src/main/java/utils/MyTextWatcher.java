@@ -12,7 +12,7 @@ import android.text.TextWatcher;
          edit.addTextChangedListener(new MyTextWatcher(new MyTextWatcher.CallBack() {
         @Override
         public void textInfo(String s, int count) {
-        Log.i("MainActivity", "textInfo: "+"内容是"+s+"\t长度是\t"+count);
+        Log.i("MainTestActivity", "textInfo: "+"内容是"+s+"\t长度是\t"+count);
         }
         }));
  * <p>
