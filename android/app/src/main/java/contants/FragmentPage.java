@@ -10,6 +10,7 @@ import fragment.LoadMoreRecyclerFragment;
 import fragment.MulitTabFragment;
 import fragment.PackageFragment;
 import fragment.PopRecyclerFragment;
+import fragment.ReactFragment;
 import fragment.RecyStickFragment;
 import fragment.RecyStickLayoutFragment;
 import fragment.RecyclerStickFragment;
@@ -44,7 +45,8 @@ public enum FragmentPage {
     STOCK_KLINE_FRAGMENT(StockKlineFragment.class, "自定义股票K线"),
     POP_RECYCLER_FRAGMENT(PopRecyclerFragment.class, "Pop中的RecyclerView"),
     LOADMOR_RECYLER_FRAGMENT(LoadMoreRecyclerFragment.class, "加载更多的RecyclerView"),
-    DATA_JSON_FRAGMENT(DataJsonFragment.class, "解析Json");
+    DATA_JSON_FRAGMENT(DataJsonFragment.class, "解析Json"),
+    REACT_FRAGMENT(ReactFragment.class, "Fragment加载ReactNative");
 
     private String title;
     private Class<?> clz;

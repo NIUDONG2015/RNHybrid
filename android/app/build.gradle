@@ -16,7 +16,7 @@ android {
 //        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         ndk {
-            abiFilters "armeabi-v7a", "x86"
+            abiFilters "armeabi-v7a"
         }
     }
     buildTypes {
@@ -92,6 +92,8 @@ dependencies {
     implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
 //    rn
     implementation "com.facebook.react:react-native:+" // From node_modules
+    implementation 'com.android.support:multidex:1.0.3'
+
 
 }
 

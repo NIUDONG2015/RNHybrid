@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.facebook.react.ReactRootView;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -26,6 +28,7 @@ import pullrefresh.XctPtrLayout;
 import pullrefresh.XctRefreshLayout;
 import utils.ColorUtils;
 import utils.HkStockUtil;
+import utils.RnViewSingletonUtils;
 import utils.UIUtils;
 import view.niudong.com.demo.MyApplication;
 import view.niudong.com.demo.R;
@@ -96,8 +99,9 @@ public class LoadMoreRecyclerFragment extends TestBaseFragment implements LoadMo
         mPullDownView.setPtrHandler(new XctRefreshLayout.DefaultRefreshListener() {
             @Override
             public void onRefreshBegin(PtrFrameLayout ptrFrameLayout) {
-                currPage=1;
+                currPage = 1;
                 items.clear();
+                items.add(mHeadPayView);
                 items.add(mHeadPayView);
                 items.add(addTitlte("我是标题一"));
                 //List
@@ -114,22 +118,23 @@ public class LoadMoreRecyclerFragment extends TestBaseFragment implements LoadMo
         });
     }
 
-public void requestNotify(){
-try {
-    currPage=1;
-    items.clear();
-    items.add(mHeadPayView);
-    items.add(addTitlte("我来自点击通知刷新数据哦"));
-    //List
-    items.addAll(firstList);
-    mPullDownView.refreshComplete();
-    mAdapter.notifyDataSetChanged();
-    mLoadMoreAdapter.setLoadMoreEnable(true);
-}catch (Exception e)
-{
-    Log.d("",""+e);
+    public void requestNotify() {
+        try {
+            currPage = 1;
+            items.clear();
+            items.add(mHeadPayView);
+            items.add(addTitlte("我来自点击通知刷新数据哦"));
+            //List
+            items.addAll(firstList);
+            mPullDownView.refreshComplete();
+            mAdapter.notifyDataSetChanged();
+            mLoadMoreAdapter.setLoadMoreEnable(true);
+        } catch (Exception e) {
+            Log.d("", "" + e);
 
-}}
+        }
+    }
+
     @Override
     protected void initData() {
         super.initData();
@@ -158,7 +163,7 @@ try {
         TextView textView = new TextView(getActivity());
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, UIUtils.dip2px(40));
         textView.setLayoutParams(layoutParams);
-        textView.setPadding(20,0,0,0);
+        textView.setPadding(20, 0, 0, 0);
         textView.setTextColor(ColorUtils.COLOR_WHITE);
         textView.setBackgroundColor(ColorUtils.COLOR_TIELE_BG);
         textView.setGravity(Gravity.CENTER | Gravity.LEFT);

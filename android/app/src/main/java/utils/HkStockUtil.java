@@ -271,6 +271,7 @@ public class HkStockUtil {
         listGrup.titleData = "原生Android嵌入ReactNative";
         mRecyclerData = new ArrayList<>();
         mRecyclerData.add("点我跳转到ReactNative列表");
+        mRecyclerData.add("Fragment列表局部Rn");
         listGrup.setmChildStr(mRecyclerData);
         grupList.add(listGrup);
 
