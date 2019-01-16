@@ -27,26 +27,6 @@ public class RnViewSingletonUtils {
     private ReactInstanceManager mReactInstanceManager;
 
     private RnViewSingletonUtils() {
-    }
-
-
-    public static RnViewSingletonUtils getInstance(Context context) {
-        mContext = context;
-        return InnerHolder.mInstance;
-    }
-
-
-    //内部类  创建实例 final 无法修改  线程安全的
-    private static class InnerHolder {
-        private static final RnViewSingletonUtils mInstance = new RnViewSingletonUtils();
-    }
-
-    /**
-     * 加载rn View
-     *
-     * @param moduleName rn 名称
-     */
-    public synchronized ReactRootView loadRnModuleName(String moduleName) {
         mReactRootView = new ReactRootView((Activity) mContext);
         mReactInstanceManager = ReactInstanceManager.builder()
                 .setApplication(((Activity) mContext).getApplication())
@@ -56,8 +36,23 @@ public class RnViewSingletonUtils {
                 .setUseDeveloperSupport(true)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();
-        mReactRootView.startReactApplication(mReactInstanceManager, moduleName, null);
-
+    }
+    public static RnViewSingletonUtils getInstance(Context context) {
+        mContext = context;
+        return InnerHolder.mInstance;
+    }
+    //内部类  创建实例 final 无法修改  线程安全的
+    private static class InnerHolder {
+        private static final RnViewSingletonUtils mInstance = new RnViewSingletonUtils();
+    }
+    /**
+     * 加载rn View*
+     * @param moduleName rn 名称
+     */
+    public synchronized ReactRootView loadRnModuleName(String moduleName) {
+        if (mReactRootView!=null&&mReactInstanceManager!=null){
+            mReactRootView.startReactApplication(mReactInstanceManager, moduleName, null);
+        }
         return mReactRootView;
     }
 
