@@ -47,7 +47,6 @@ export default class LoadMorePage extends Component {
 
         return (
             <View style={styles.container}>
-                {navigationBar}
                 <FlatList
                     showsVerticalScrollIndicator={false}
                     data={this.state.data}

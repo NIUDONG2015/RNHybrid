@@ -42,6 +42,8 @@ import pullrefresh.XctRefreshLayout;
 import recycleview.adapter.MainPageItemAdapter;
 import recycleview.view.InvestorBillMainActivity;
 import rn.BaseRnActivity;
+import rn.RnListActivity;
+import rn.RnViewActivity;
 import testdb.TestDBApiActivity;
 import utils.Bus;
 import utils.ColorUtils;
@@ -304,11 +306,11 @@ public class HomeFragment extends TestBaseFragment implements MainPageItemAdapte
             case "加载更多的RecyclerView":
                 BaseFragmentActivity.startFragment(mContext, FragmentPage.LOADMOR_RECYLER_FRAGMENT);
                 break;
-                case "Fragment列表局部Rn":
-                BaseFragmentActivity.startFragment(mContext, FragmentPage.REACT_FRAGMENT);
+            case "Fragment列表局部Rn":
+                enterActivity(RnViewActivity.class);
                 break;
             case "点我跳转到ReactNative列表":
-                enterActivity(BaseRnActivity.class);
+                enterActivity(RnListActivity.class);
                 break;
             case "点我显示通知栏":
 //                sendChatMsg();
