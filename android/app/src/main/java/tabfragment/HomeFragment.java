@@ -306,6 +306,10 @@ public class HomeFragment extends TestBaseFragment implements MainPageItemAdapte
             case "加载更多的RecyclerView":
                 BaseFragmentActivity.startFragment(mContext, FragmentPage.LOADMOR_RECYLER_FRAGMENT);
                 break;
+
+                case "跳转另一个App":
+                BaseFragmentActivity.startFragment(mContext, FragmentPage.JUMP_OTHER_APP);
+                break;
             case "ReactNative分组悬停列表":
                 enterActivity(RnViewActivity.class);
                 break;

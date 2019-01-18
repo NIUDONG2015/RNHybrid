@@ -123,4 +123,22 @@ public class AppInfoUtils {
         }
         return null;
     }
+    public static boolean checkAppInstalled(Context context,String pkgName) {
+        if (pkgName== null || pkgName.isEmpty()) {
+            return false;
+        }
+        PackageInfo packageInfo;
+        try {
+            packageInfo = context.getPackageManager().getPackageInfo(pkgName, 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            packageInfo = null;
+            e.printStackTrace();
+        }
+        if(packageInfo == null) {
+            return false;
+        } else {
+            return true;//true为安装了，false为未安装
+        }
+    }
+
 }

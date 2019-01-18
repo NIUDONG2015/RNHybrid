@@ -6,6 +6,7 @@ import fragment.CustomClockFragment;
 import fragment.CustomViewChiFragment;
 import fragment.CustomViewFragment;
 import fragment.DataJsonFragment;
+import fragment.JumpOtherAppFragment;
 import fragment.LoadMoreRecyclerFragment;
 import fragment.MulitTabFragment;
 import fragment.PackageFragment;
@@ -46,7 +47,8 @@ public enum FragmentPage {
     POP_RECYCLER_FRAGMENT(PopRecyclerFragment.class, "Pop中的RecyclerView"),
     LOADMOR_RECYLER_FRAGMENT(LoadMoreRecyclerFragment.class, "加载更多的RecyclerView"),
     DATA_JSON_FRAGMENT(DataJsonFragment.class, "解析Json"),
-    REACT_FRAGMENT(ReactFragment.class, "Fragment加载ReactNative");
+    REACT_FRAGMENT(ReactFragment.class, "Fragment加载ReactNative"),
+    JUMP_OTHER_APP(JumpOtherAppFragment .class, "跳转另一个App");
 
     private String title;
     private Class<?> clz;

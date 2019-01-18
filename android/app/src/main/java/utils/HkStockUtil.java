@@ -341,6 +341,7 @@ public class HkStockUtil {
         mRecyclerData.add("Aidl跨进程通讯");
         mRecyclerData.add("BitMap合成图片");
         mRecyclerData.add("手动解析Json");
+        mRecyclerData.add("跳转另一个App");
         listGrup.setmChildStr(mRecyclerData);
         grupList.add(listGrup);
         //通知栏
