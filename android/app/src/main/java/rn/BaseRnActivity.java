@@ -20,6 +20,8 @@ import com.facebook.react.shell.MainReactPackage;
 import view.niudong.com.demo.MyApplication;
 import view.niudong.com.demo.R;
 
+import static com.tencent.bugly.beta.tinker.TinkerManager.getApplication;
+
 /**
  * RN下的数据界面  rn.BaseRnActivity
  * 集成RN的页面注册此模块
@@ -40,8 +42,8 @@ public abstract class BaseRnActivity extends AppCompatActivity implements Defaul
         mReactRootView = new ReactRootView(this);
         mReactInstanceManager = ReactInstanceManager.builder()
                 .setApplication(getApplication())
-                .setBundleAssetName("index.android.bundle")
-                .setJSMainModulePath("index")
+                .setBundleAssetName("index.android.bundle")//TODO 所有的Js都在这里
+                .setJSMainModulePath("index")//入口文件
                 .addPackage(new MainReactPackage())
                 .setUseDeveloperSupport(true)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
