@@ -145,8 +145,8 @@ export default class LoadMorePage extends Component {
 
     onSuccess(response) {
         console.log('Joker', response);
-        if (response.error_code == 0) {
-            if (this.state.page == 1) {
+        if (response.error_code ===0) {
+            if (this.state.page === 1) {
                 this.setState({
                     data: response.result.data,
                 })
