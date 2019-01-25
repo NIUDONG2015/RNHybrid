@@ -4,11 +4,12 @@ import {
     View,
     Text,
     SectionList,
-    Platform, StyleSheet
+    Platform, StyleSheet, DeviceInfo
 } from 'react-native';
 import * as Dimens from "../utils/Dimens";
 import * as Color from "../utils/Color";
 import Loading from "../utils/Loading";
+import SafeAreaViewPlus from "../utils/SafeAreaViewPlus";
 
 const titleName = "OC你好，我是RN分组列表"
 export default class TestCitySelect extends Component {
@@ -89,10 +90,11 @@ export default class TestCitySelect extends Component {
         let mTitleBar = Platform.OS === "ios" ? navigationBar : null;
 
         return (
-            <View style={{flex: 1}}>
+            <SafeAreaViewPlus topInset={true}
+                              bottomInset={false}>
                 {mTitleBar}
                 {this.getFinalList(this.state.dataType)}
-            </View>
+            </SafeAreaViewPlus>
         );
     }
 
@@ -122,7 +124,7 @@ export default class TestCitySelect extends Component {
                     },
                 ];
                 resolve(sections);
-            }, 1500)
+            }, 200)
         });
     }
 
@@ -197,7 +199,7 @@ const styles = StyleSheet.create({
     title_bar_view: {
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: Color.color_theme, width: Dimens.screen_width, height: 65
+        backgroundColor: Color.color_theme, width: Dimens.screen_width, height: 80
     }
 });
 
